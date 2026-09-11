@@ -1,0 +1,14 @@
+# Private research materials must never be published with the website.
+*.docx
+*.pdf
+*.doc
+*.tex
+*.zip
+.env
+.env.*
+node_modules/
+__pycache__/
+*.docx
+*.pdf
+deploy/
+.tmp/

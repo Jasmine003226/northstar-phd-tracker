@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Northstar PhD Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="sources.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark">N</span><div><strong>NORTHSTAR</strong><small>PhD TRACKER</small></div></div>
+    <nav>
+      <button class="nav-item active" data-view="opportunities"><span>⌂</span>机会列表</button>
+      <button class="nav-item" data-view="pipeline"><span>▤</span>申请看板</button>
+      <button class="nav-item" data-view="profile"><span>◎</span>我的匹配画像</button>
+      <button class="nav-item" data-view="logs"><span>↻</span>检索记录</button>
+    </nav>
+    <div class="sidebar-foot"><span class="pulse"></span><div><strong>每日更新已启用</strong><small>下次检索 08:30</small></div></div>
+  </aside>
+
+  <main>
+    <header>
+      <div><p class="eyebrow">EUROPE · 2027 INTAKE</p><h1 id="page-title">博士机会</h1><p id="page-subtitle">围绕浮式海上风电与耦合动力学，为你的研究轨迹筛选。</p></div>
+      <button class="icon-button" id="theme-button" title="切换明暗模式">☼</button>
+    </header>
+
+    <section id="opportunities" class="view active">
+      <div class="stats">
+        <div><strong id="open-count">0</strong><span>已核验开放岗位</span></div>
+        <div><strong id="high-count">0</strong><span>高匹配</span></div>
+        <div><strong id="new-count">0</strong><span>本周新增岗位</span></div>
+        <div><strong id="tracked-count">0</strong><span>申请推进中</span></div>
+      </div>
+      <div class="toolbar">
+        <label class="search"><span>⌕</span><input id="search" placeholder="搜索项目、学校、国家或研究方向"></label>
+        <select id="country-filter"><option value="">全部国家</option></select>
+        <select id="match-filter"><option value="0">全部匹配度</option><option value="85">85% 以上</option><option value="70">70% 以上</option></select>
+        <select id="sort"><option value="match">匹配度优先</option><option value="deadline">截止日期优先</option><option value="newest">最新发现</option></select>
+      </div>
+      <div class="result-meta"><span id="result-count"></span><span><i class="verified-dot"></i>来源已核验</span></div>
+      <div id="cards" class="cards"></div>
+      <div class="sources-head"><div><p class="eyebrow">SAVED SOURCES FROM REDNOTE</p><h2>岗位发现渠道</h2><p>来自你分享的帖子。它们是检索入口，不等同于具体岗位。</p></div><span class="source-count">9 个已收藏</span></div>
+      <div id="source-grid" class="source-grid"></div>
+    </section>
+
+    <section id="pipeline" class="view"><div id="board" class="board"></div></section>
+    <section id="profile" class="view profile-view">
+      <div class="profile-head"><p class="eyebrow">CANDIDATE FIT MODEL</p><h2>朱家欣的研究匹配画像</h2><p>基于你提供的论文、中期报告及硕士论文大纲。匹配评分仅使用来源中明确出现的要求。</p></div>
+      <div class="profile-grid">
+        <div class="profile-section"><h3>研究主线</h3><div class="tags" id="profile-topics"></div></div>
+        <div class="profile-section"><h3>方法与工具</h3><div class="tags" id="profile-tools"></div></div>
+        <div class="profile-section wide"><h3>已验证经历</h3><ul><li>IEA 15 MW–VolturnUS-S 全耦合浮式风机建模</li><li>OpenFAST 与 QBlade 代码间对比，覆盖 11 个风速与 16 个随机种子</li><li>PSD、空间相干性、雨流计数、Wöhler 曲线与 DEL 疲劳分析</li><li>Ocean Engineering 论文，DOI 10.1016/j.oceaneng.2026.126697</li></ul></div>
+        <div class="profile-section wide"><h3>筛选规则</h3><p>优先欧洲带薪博士岗位，研究内容涉及浮式风机、海上风电、气动弹性、多物理场耦合、结构动力学、系泊或疲劳载荷。入职时间优先考虑 2027 年 3 月之后。</p></div>
+      </div>
+    </section>
+    <section id="logs" class="view"><div class="log-panel"><div class="log-title"><div><h2>每日检索记录</h2><p>每一次搜索、去重和来源核验都有记录。</p></div><span class="status-pill">运行正常</span></div><div id="log-list"></div></div></section>
+  </main>
+
+  <div id="overlay" class="overlay"></div>
+  <aside id="drawer" class="drawer" aria-hidden="true"><button id="close-drawer" class="close" title="关闭">×</button><div id="drawer-content"></div></aside>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
