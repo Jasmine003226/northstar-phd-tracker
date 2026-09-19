@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-09-19",
+    "searched": 4,
+    "candidates": 169,
+    "verified": 0,
+    "errors": []
+  },
+  {
     "date": "2026-09-18",
     "searched": 4,
     "candidates": 174,
