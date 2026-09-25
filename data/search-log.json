@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-09-25",
+    "searched": 4,
+    "candidates": 56,
+    "verified": 0,
+    "errors": [
+      "https://www.academictransfer.com/en/jobs/?q=offshore%20wind: HTTPError",
+      "https://academicpositions.com/find-jobs?search=offshore%20wind: HTTPError"
+    ]
+  },
+  {
     "date": "2026-09-24",
     "searched": 4,
     "candidates": 67,
