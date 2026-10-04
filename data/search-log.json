@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-10-04",
+    "searched": 4,
+    "candidates": 71,
+    "verified": 0,
+    "errors": [
+      "https://academicpositions.com/find-jobs?search=offshore%20wind: HTTPError"
+    ]
+  },
+  {
     "date": "2026-10-03",
     "searched": 4,
     "candidates": 69,
