@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-11-04",
+    "searched": 4,
+    "candidates": 50,
+    "verified": 0,
+    "errors": [
+      "https://www.jobbnorge.no/search/en?OrderBy=Published&Period=All&query=offshore%20wind: IncompleteRead",
+      "https://academicpositions.com/find-jobs?search=offshore%20wind: HTTPError"
+    ]
+  },
+  {
     "date": "2026-11-03",
     "searched": 4,
     "candidates": 59,
